@@ -21,10 +21,12 @@ jobs:
         with:
           node-version: '18.x'
 
-      # - name: npm install, build, and test
-      #   run: |
-      #     npm install
-      #     npm run build
+      - name: npm install, build, and test
+        run: |
+          npm install
+          npm run build
+        env:
+         CI: false
           
 
       - name: Zip artifact for deployment
